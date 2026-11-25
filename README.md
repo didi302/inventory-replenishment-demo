@@ -1,10 +1,7 @@
 # Inventory Replenishment
 
-Version marker: TC088-GIT-V1.
+Version marker: TC088-GIT-V2.
 
-Reorder when stock drops below 10 units. At 10 units or above, do not reorder.
+For each warehouse and SKU, projected stock equals on-hand stock minus reservations plus inbound stock. Reorder when projected stock drops below 25 units. At 25 units or above, do not reorder.
 
-```python
-def needs_restock(stock: int) -> bool:
-    return stock < 10
-```
+The default target is 30 units, including 5 units of safety stock. Order quantities are rounded up to full cases of 6 units. For example, projected stock of 23 units requires an order of 12 units.
