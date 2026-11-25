@@ -1,8 +1,8 @@
-"""Inventory replenishment rules for the V1 demo."""
+"""Inventory replenishment rules for the V2 demo."""
 
 from dataclasses import dataclass
 
-REORDER_POINT = 10
+REORDER_POINT = 25
 
 
 @dataclass(frozen=True)
